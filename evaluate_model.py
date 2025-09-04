@@ -66,4 +66,4 @@ def evaluate(results_path, ref_path):
 
 # 运行
 if __name__ == "__main__":
-    evaluate("json/qwen_description_result.jsonl", "json/ref_descriptions.jsonl")
+    evaluate("json/qwen_result_descriptions.jsonl", "json/qwen_ref_descriptions.jsonl")

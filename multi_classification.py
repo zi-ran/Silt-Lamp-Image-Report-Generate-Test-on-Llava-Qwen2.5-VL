@@ -13,14 +13,14 @@ def load_data():
     """加载参考答案和预测结果"""
     # 加载参考答案
     ref_data = {}
-    with open('json/ref_diagnoses.jsonl', 'r', encoding='utf-8') as f:
+    with open('json/qwen_ref_diagnoses.jsonl', 'r', encoding='utf-8') as f:
         for line in f:
             data = json.loads(line)
             ref_data[data['question_id']] = data['answer']
     
     # 加载预测结果
     pred_data = {}
-    with open('json/qwen_diagnosis_result.jsonl', 'r', encoding='utf-8') as f:
+    with open('json/llava_result_diagnosis.jsonl', 'r', encoding='utf-8') as f:
         for line in f:
             data = json.loads(line)
             pred_data[data['question_id']] = data['text']
